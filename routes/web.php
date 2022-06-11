@@ -14,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    phpinfo();
-    // $redis = \Illuminate\Support\Facades\Redis::connection();
-    // dd($redis);
-    // return view('welcome');
+    $redis = \Illuminate\Support\Facades\Redis::connection();
+    dd($redis);
+    return view('welcome');
 });
